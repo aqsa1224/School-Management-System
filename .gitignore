@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+vendor/
+node_modules/
+backend.rar
+backend.zip
+backend/_backup_before_step3/
+backend/step3_cleanup.bat
+*.log
+*.zip
+*.rar

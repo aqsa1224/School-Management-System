@@ -1,0 +1,141 @@
+// 1) Hamari theme variables (Bootstrap se PEHLE aani chahiye)
+@import 'variables';
+
+// 2) Bootstrap 5 (poora)
+@import 'bootstrap/scss/bootstrap';
+
+// 3) Chhote custom helpers
+.text-gold   { color: $gold !important; }
+.bg-black    { background-color: $black !important; }
+.bg-charcoal { background-color: $charcoal !important; }
+.border-gold { border-color: $gold !important; }
+.btn-outline-gold {
+    --bs-btn-color: #{$gold};
+    --bs-btn-border-color: #{$gold};
+    --bs-btn-hover-bg: #{$gold};
+    --bs-btn-hover-border-color: #{$gold};
+    --bs-btn-hover-color: #{$black};
+    --bs-btn-active-bg: #{$gold-dark};
+    --bs-btn-active-border-color: #{$gold-dark};
+    --bs-btn-active-color: #{$black};
+}
+.table-responsive { border-radius: $border-radius; }
+.card { box-shadow: $card-box-shadow; }
+
+// ================= APP SHELL (sidebar + content) =================
+$sidebar-width: 260px;
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    background: $black;
+    color: #cfcfcf;
+    width: $sidebar-width;
+    flex-shrink: 0;
+    --bs-offcanvas-width: #{$sidebar-width};
+    --bs-offcanvas-bg: #{$black};
+    --bs-offcanvas-color: #cfcfcf;
+
+    // Desktop: sidebar screen par chipka rahe
+    @include media-breakpoint-up(lg) {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid rgba($gold, .25);
+    }
+}
+
+.sidebar-brand {
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid rgba($gold, .25);
+    width: 100%;
+}
+.sidebar-logo  { width: 34px; height: 34px; color: $gold; }
+.sidebar-title { color: #fff; font-weight: 700; font-size: 1rem; line-height: 1.15; }
+
+.sidebar-nav { padding: 1rem .75rem; width: 100%; }
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: #bdbdbd;
+    padding: .6rem .9rem;
+    border-radius: $border-radius;
+    margin-bottom: .15rem;
+    font-weight: 500;
+
+    i { font-size: 1.1rem; }
+
+    &:hover { color: $gold; background: rgba($gold, .1); }
+    &.active { background: $gold; color: $black; font-weight: 600; }
+}
+
+.sidebar-section {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .7rem;
+    color: #777;
+    padding: 1.25rem .9rem .4rem;
+}
+
+.app-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: .7rem 1.25rem;
+    border-bottom: 1px solid rgba($black, .08);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+// Purane views ke <h2 class="font-semibold text-xl ..."> bhi ek jaisa dikhein
+.page-header h1, .page-header h2, .page-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: $black;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: $gold;
+    color: $black;
+    font-weight: 700;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-content { flex: 1 1 auto; padding: 1.5rem 1.25rem; }
+.app-footer  { text-align: center; color: #888; font-size: .85rem; padding: 1rem; }
+
+// ================= AUTH PAGES (login etc.) =================
+.auth-body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, $charcoal 0%, $black 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.auth-wrap { width: 100%; max-width: 420px; }
+.auth-brand { display: block; text-align: center; margin-bottom: 1.25rem; }
+.auth-logo  { width: 64px; height: 64px; color: $gold; }
+.auth-title { color: #fff; font-weight: 700; margin-top: .5rem; }
+.auth-card  { border-top: 4px solid $gold; border-radius: $border-radius-lg; }

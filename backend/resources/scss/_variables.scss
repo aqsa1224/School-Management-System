@@ -1,0 +1,35 @@
+// ===== Black + Gold theme (Bootstrap variables) =====
+// Yahan sirf colours/fonts badalte hain, baqi Bootstrap ka default rehta hai.
+
+$gold:        #d4af37;
+$gold-dark:   #b8922a;
+$black:       #0b0b0b;
+$charcoal:    #1a1a1a;
+
+$primary:     $gold;
+$secondary:   #6c6c6c;
+$dark:        $black;
+$light:       #f6f4ee;
+
+$body-bg:     #f6f4ee;
+$body-color:  #212121;
+$link-color:  $gold-dark;
+$link-hover-color: darken($gold-dark, 10%);
+
+$font-family-sans-serif: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+$border-radius:    .5rem;
+$border-radius-lg: .75rem;
+
+$input-focus-border-color: $gold;
+$input-focus-box-shadow:   0 0 0 .25rem rgba($gold, .25);
+$form-check-input-checked-bg-color: $gold;
+$form-check-input-checked-border-color: $gold;
+
+// Tables / cards
+$table-dark-bg:           $black;
+$table-dark-border-color: $charcoal;
+$card-border-width:       0;
+$card-box-shadow:         0 1px 3px rgba(0, 0, 0, .08);
+$dropdown-link-active-bg: $gold;
+$dropdown-link-active-color: $black;
