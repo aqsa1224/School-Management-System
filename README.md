@@ -2,6 +2,7 @@
 
 A role-based school management web application built with **Laravel 12**, **MySQL** and **Bootstrap 5**, with a black and gold theme. It covers students, teachers, classes, attendance, exams and marks, fee collection (vouchers, receipts, PDFs) and reports.
 
+![Dashboard](docs/screenshots/01-dashboard.png)
 
 ## Features
 
@@ -16,6 +17,17 @@ A role-based school management web application built with **Laravel 12**, **MySQ
 - **Reports**: students, attendance, results, fees, daily collection, monthly collection.
 - **Settings**: school name, address, logo, currency and pass percentage.
 - **User management**: create staff users, activate or deactivate them. The last active admin is protected from deletion.
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Login](docs/screenshots/02-login.png) | ![Students](docs/screenshots/03-students.png) |
+| Login | Students list |
+| ![Attendance](docs/screenshots/04-attendance.png) | ![Marks](docs/screenshots/05-marks.png) |
+| Attendance | Marks entry |
+| ![Fee voucher](docs/screenshots/06-fee-voucher.png) | ![Reports](docs/screenshots/07-reports.png) |
+| Fee voucher | Reports |
 
 ## Tech stack
 
@@ -118,8 +130,5 @@ backend/
 ```
 
 
-
 ## License
-
  project is proprietary.
-
